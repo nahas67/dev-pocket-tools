@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1540,
+  "input": {
+    "code": 501
+  },
+  "expected": {
+    "code": 501,
+    "title": "Not Implemented",
+    "category": "5xx",
+    "description": "Server does not support the requested functionality."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
