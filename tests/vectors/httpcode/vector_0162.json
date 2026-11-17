@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1610,
+  "input": {
+    "code": 510
+  },
+  "expected": {
+    "code": 510,
+    "title": "Not Extended",
+    "category": "5xx",
+    "description": "Further extensions to the request are required."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
