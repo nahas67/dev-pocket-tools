@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 382,
+  "input": {
+    "port": 8020
+  },
+  "expected": {
+    "valid": true,
+    "service": "http",
+    "description": "WebDAV / media server"
+  },
+  "note": "Well-known service registry entry."
+}
