@@ -1,0 +1,14 @@
+{
+  "module": "jsonfmt",
+  "case": 1094,
+  "input": {
+    "text": "{\"num\":1.5,\"exp\":1e3,\"neg\":-7}",
+    "indent": 2
+  },
+  "expected": {
+    "formatted": "{\n  \"num\": 1.5,\n  \"exp\": 1000.0,\n  \"neg\": -7\n}",
+    "minified": "{\"num\":1.5,\"exp\":1000.0,\"neg\":-7}",
+    "is_json": true
+  },
+  "note": "Reference formatting computed with stdlib json.dumps."
+}
