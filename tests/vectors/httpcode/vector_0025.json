@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 240,
+  "input": {
+    "code": 503
+  },
+  "expected": {
+    "code": 503,
+    "title": "Service Unavailable",
+    "category": "5xx",
+    "description": "Server is temporarily overloaded or down."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
