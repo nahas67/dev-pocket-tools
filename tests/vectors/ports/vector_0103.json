@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1022,
+  "input": {
+    "port": 2083
+  },
+  "expected": {
+    "valid": true,
+    "service": "cpanel",
+    "description": "cPanel over SSL"
+  },
+  "note": "Well-known service registry entry."
+}
