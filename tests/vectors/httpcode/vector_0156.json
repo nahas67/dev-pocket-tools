@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1550,
+  "input": {
+    "code": 100
+  },
+  "expected": {
+    "code": 100,
+    "title": "Continue",
+    "category": "1xx",
+    "description": "Server has received the request headers; client should send the body."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
