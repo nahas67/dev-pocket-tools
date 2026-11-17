@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 700,
+  "input": {
+    "code": 304
+  },
+  "expected": {
+    "code": 304,
+    "title": "Not Modified",
+    "category": "3xx",
+    "description": "Cached version is still valid."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
