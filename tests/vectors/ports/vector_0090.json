@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 892,
+  "input": {
+    "port": 2181
+  },
+  "expected": {
+    "valid": true,
+    "service": "zookeeper",
+    "description": "Apache ZooKeeper"
+  },
+  "note": "Well-known service registry entry."
+}
