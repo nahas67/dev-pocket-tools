@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1912,
+  "input": {
+    "port": 23
+  },
+  "expected": {
+    "valid": true,
+    "service": "telnet",
+    "description": "Telnet"
+  },
+  "note": "Well-known service registry entry."
+}
