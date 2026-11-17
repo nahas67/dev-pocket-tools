@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1542,
+  "input": {
+    "port": 544
+  },
+  "expected": {
+    "valid": true,
+    "service": "kshell",
+    "description": "Kerberos Shell"
+  },
+  "note": "Well-known service registry entry."
+}
