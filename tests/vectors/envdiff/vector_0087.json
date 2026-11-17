@@ -1,0 +1,46 @@
+{
+  "module": "envdiff",
+  "case": 863,
+  "input": {
+    "a": {
+      "SHELL": "/bin/bash",
+      "PWD": "/workspace",
+      "LANG": "en_US.UTF-8",
+      "TZ": "UTC",
+      "TERM": "xterm-256color",
+      "EDITOR": "vim",
+      "VISUAL": "code",
+      "CI": "true"
+    },
+    "b": {
+      "SHELL": "CHANGED",
+      "PWD": "/workspace",
+      "LANG": "en_US.UTF-8",
+      "TZ": "UTC",
+      "TERM": "xterm-256color",
+      "EDITOR": "vim",
+      "VISUAL": "code",
+      "NEW_VAR_13": "new"
+    }
+  },
+  "expected": {
+    "added": [
+      "NEW_VAR_13"
+    ],
+    "removed": [
+      "CI"
+    ],
+    "changed": [
+      "SHELL"
+    ],
+    "same": [
+      "EDITOR",
+      "LANG",
+      "PWD",
+      "TERM",
+      "TZ",
+      "VISUAL"
+    ]
+  },
+  "note": "Diff computed with plain set/dict operations."
+}
