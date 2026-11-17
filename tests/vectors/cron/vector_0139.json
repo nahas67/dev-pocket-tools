@@ -1,0 +1,12 @@
+{
+  "module": "cron",
+  "case": 1385,
+  "input": {
+    "expression": "@reboot"
+  },
+  "expected": {
+    "field_count": 1,
+    "expression": "@reboot"
+  },
+  "note": "Cron expression catalogue entry."
+}
