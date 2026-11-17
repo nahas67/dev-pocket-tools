@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1082,
+  "input": {
+    "port": 9443
+  },
+  "expected": {
+    "valid": true,
+    "service": "https",
+    "description": "Alternate HTTPS"
+  },
+  "note": "Well-known service registry entry."
+}
