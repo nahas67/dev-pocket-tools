@@ -1,0 +1,14 @@
+{
+  "module": "epoch",
+  "case": 761,
+  "input": {
+    "date": "2022-01-31",
+    "unit": "s"
+  },
+  "expected": {
+    "epoch_s": 1643587200,
+    "epoch_ms": 1643587200000,
+    "iso": "2022-01-31"
+  },
+  "note": "UTC midnight epoch computed with datetime; independent of dptlib.epoch."
+}
