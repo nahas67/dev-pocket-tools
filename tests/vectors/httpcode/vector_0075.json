@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 740,
+  "input": {
+    "code": 507
+  },
+  "expected": {
+    "code": 507,
+    "title": "Insufficient Storage",
+    "category": "5xx",
+    "description": "WebDAV: server cannot store the representation."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
