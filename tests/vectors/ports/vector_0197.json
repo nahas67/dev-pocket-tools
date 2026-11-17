@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1962,
+  "input": {
+    "port": 995
+  },
+  "expected": {
+    "valid": true,
+    "service": "pop3s",
+    "description": "POP3 over SSL"
+  },
+  "note": "Well-known service registry entry."
+}
