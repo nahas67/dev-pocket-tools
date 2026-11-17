@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 132,
+  "input": {
+    "port": 11211
+  },
+  "expected": {
+    "valid": true,
+    "service": "memcached",
+    "description": "Memcached"
+  },
+  "note": "Well-known service registry entry."
+}
