@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1272,
+  "input": {
+    "port": 554
+  },
+  "expected": {
+    "valid": true,
+    "service": "rtsp",
+    "description": "Real Time Streaming Protocol"
+  },
+  "note": "Well-known service registry entry."
+}
