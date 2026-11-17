@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 279,
+  "input": {
+    "line": "  release/1.2.0"
+  },
+  "expected": {
+    "name": "release/1.2.0",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
