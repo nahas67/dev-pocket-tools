@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 662,
+  "input": {
+    "port": 8500
+  },
+  "expected": {
+    "valid": true,
+    "service": "consul",
+    "description": "Consul HTTP API"
+  },
+  "note": "Well-known service registry entry."
+}
