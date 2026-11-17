@@ -1,0 +1,12 @@
+{
+  "module": "cron",
+  "case": 115,
+  "input": {
+    "expression": "0 0-6 * * *"
+  },
+  "expected": {
+    "field_count": 5,
+    "expression": "0 0-6 * * *"
+  },
+  "note": "Cron expression catalogue entry."
+}
