@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1532,
+  "input": {
+    "port": 194
+  },
+  "expected": {
+    "valid": true,
+    "service": "irc",
+    "description": "Internet Relay Chat"
+  },
+  "note": "Well-known service registry entry."
+}
