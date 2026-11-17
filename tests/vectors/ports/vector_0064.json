@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 632,
+  "input": {
+    "port": 4321
+  },
+  "expected": {
+    "valid": true,
+    "service": "rwhois",
+    "description": "RWhoIs"
+  },
+  "note": "Well-known service registry entry."
+}
