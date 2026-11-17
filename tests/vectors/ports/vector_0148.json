@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1472,
+  "input": {
+    "port": 8081
+  },
+  "expected": {
+    "valid": true,
+    "service": "http-proxy",
+    "description": "Alternate proxy"
+  },
+  "note": "Well-known service registry entry."
+}
