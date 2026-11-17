@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 500,
+  "input": {
+    "code": 200
+  },
+  "expected": {
+    "code": 200,
+    "title": "OK",
+    "category": "2xx",
+    "description": "The request succeeded."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
