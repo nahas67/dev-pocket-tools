@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 82,
+  "input": {
+    "port": 3128
+  },
+  "expected": {
+    "valid": true,
+    "service": "squid",
+    "description": "Squid HTTP proxy"
+  },
+  "note": "Well-known service registry entry."
+}
