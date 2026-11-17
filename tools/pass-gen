@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Generate cryptographically secure random passwords."""
+
+from __future__ import annotations
+
+import argparse
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dptlib import passgen  # noqa: E402
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="pass-gen",
+        description="Generate random passwords and show their entropy.",
+    )
+    parser.add_argument("--length", "-n", type=int, default=16, help="password length (default: 16)")
+    parser.add_argument("--count", "-c", type=int, default=1, help="how many to generate (default: 1)")
+    parser.add_argument("--no-upper", action="store_true", help="exclude uppercase letters")
+    parser.add_argument("--no-lower", action="store_true", help="exclude lowercase letters")
+    parser.add_argument("--no-digits", action="store_true", help="exclude digits")
+    parser.add_argument("--no-symbols", action="store_true", help="exclude symbols")
+    parser.add_argument("--allow-ambiguous", action="store_true", help="allow 0/O/1/l/I etc.")
+    args = parser.parse_args(argv)
+
+    if args.count < 1:
+        print("pass-gen: --count must be at least 1", file=sys.stderr)
+        return 1
+
+    kwargs = dict(
+        length=args.length,
+        use_upper=not args.no_upper,
+        use_lower=not args.no_lower,
+        use_digits=not args.no_digits,
+        use_symbols=not args.no_symbols,
+        exclude_ambiguous=not args.allow_ambiguous,
+    )
+    try:
+        pool_chars = []
+        if kwargs["use_upper"]:
+            pool_chars.append(passgen.UPPER)
+        if kwargs["use_lower"]:
+            pool_chars.append(passgen.LOWER)
+        if kwargs["use_digits"]:
+            pool_chars.append(passgen.DIGITS)
+        if kwargs["use_symbols"]:
+            pool_chars.append(passgen.SYMBOLS)
+        if kwargs["exclude_ambiguous"]:
+            pool_chars = [
+                "".join(c for c in group if c not in passgen.AMBIGUOUS)
+                for group in pool_chars
+            ]
+        pool_size = len(set("".join(pool_chars)))
+        entropy = passgen.estimate_entropy(args.length, pool_size)
+        for _ in range(args.count):
+            print(passgen.generate(**kwargs))
+        print(f"# pool={pool_size}  entropy={entropy:.1f} bits", file=sys.stderr)
+    except ValueError as exc:
+        print(f"pass-gen: {exc}", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
