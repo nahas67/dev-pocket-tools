@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1482,
+  "input": {
+    "port": 8888
+  },
+  "expected": {
+    "valid": true,
+    "service": "http",
+    "description": "Jupyter / Nginx"
+  },
+  "note": "Well-known service registry entry."
+}
