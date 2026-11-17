@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 760,
+  "input": {
+    "code": 302
+  },
+  "expected": {
+    "code": 302,
+    "title": "Found",
+    "category": "3xx",
+    "description": "Resource temporarily resides at a different URI."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
