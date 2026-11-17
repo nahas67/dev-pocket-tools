@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 340,
+  "input": {
+    "code": 408
+  },
+  "expected": {
+    "code": 408,
+    "title": "Request Timeout",
+    "category": "4xx",
+    "description": "Server timed out waiting for the request."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
