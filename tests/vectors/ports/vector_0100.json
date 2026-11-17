@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 992,
+  "input": {
+    "port": 445
+  },
+  "expected": {
+    "valid": true,
+    "service": "microsoft-ds",
+    "description": "Microsoft SMB"
+  },
+  "note": "Well-known service registry entry."
+}
