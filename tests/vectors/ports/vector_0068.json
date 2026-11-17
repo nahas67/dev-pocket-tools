@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 672,
+  "input": {
+    "port": 9300
+  },
+  "expected": {
+    "valid": true,
+    "service": "elasticsearch",
+    "description": "Elasticsearch transport"
+  },
+  "note": "Well-known service registry entry."
+}
