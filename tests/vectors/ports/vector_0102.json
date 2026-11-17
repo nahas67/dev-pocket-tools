@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1012,
+  "input": {
+    "port": 1080
+  },
+  "expected": {
+    "valid": true,
+    "service": "socks",
+    "description": "SOCKS proxy"
+  },
+  "note": "Well-known service registry entry."
+}
