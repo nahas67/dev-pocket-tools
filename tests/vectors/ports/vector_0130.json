@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1292,
+  "input": {
+    "port": 2049
+  },
+  "expected": {
+    "valid": true,
+    "service": "nfs",
+    "description": "Network File System"
+  },
+  "note": "Well-known service registry entry."
+}
