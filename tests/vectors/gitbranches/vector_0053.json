@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 529,
+  "input": {
+    "line": "  feature/add-auth"
+  },
+  "expected": {
+    "name": "feature/add-auth",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
