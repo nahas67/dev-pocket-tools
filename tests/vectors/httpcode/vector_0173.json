@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1720,
+  "input": {
+    "code": 426
+  },
+  "expected": {
+    "code": 426,
+    "title": "Upgrade Required",
+    "category": "4xx",
+    "description": "Client must switch to a different protocol."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
