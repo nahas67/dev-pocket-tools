@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1622,
+  "input": {
+    "port": 9092
+  },
+  "expected": {
+    "valid": true,
+    "service": "kafka",
+    "description": "Apache Kafka"
+  },
+  "note": "Well-known service registry entry."
+}
