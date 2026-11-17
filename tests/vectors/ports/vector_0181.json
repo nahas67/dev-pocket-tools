@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1802,
+  "input": {
+    "port": 162
+  },
+  "expected": {
+    "valid": true,
+    "service": "snmptrap",
+    "description": "SNMP Trap"
+  },
+  "note": "Well-known service registry entry."
+}
