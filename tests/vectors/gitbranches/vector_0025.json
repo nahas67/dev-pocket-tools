@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 249,
+  "input": {
+    "line": "  user/john/experiment"
+  },
+  "expected": {
+    "name": "user/john/experiment",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
