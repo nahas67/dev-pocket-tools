@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 322,
+  "input": {
+    "port": 628
+  },
+  "expected": {
+    "valid": true,
+    "service": "afpovertcp",
+    "description": "AFP over TCP"
+  },
+  "note": "Well-known service registry entry."
+}
