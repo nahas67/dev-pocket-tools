@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 850,
+  "input": {
+    "code": 424
+  },
+  "expected": {
+    "code": 424,
+    "title": "Failed Dependency",
+    "category": "4xx",
+    "description": "WebDAV: action failed because of a previous action."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
