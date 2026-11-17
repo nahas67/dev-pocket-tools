@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 912,
+  "input": {
+    "port": 5632
+  },
+  "expected": {
+    "valid": true,
+    "service": "pcanywhere",
+    "description": "pcAnywhere data"
+  },
+  "note": "Well-known service registry entry."
+}
