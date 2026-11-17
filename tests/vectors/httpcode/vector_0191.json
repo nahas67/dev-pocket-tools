@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1900,
+  "input": {
+    "code": 418
+  },
+  "expected": {
+    "code": 418,
+    "title": "I'm a teapot",
+    "category": "4xx",
+    "description": "RFC 2324 April Fools' joke status."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
