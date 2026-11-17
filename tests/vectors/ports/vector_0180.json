@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1792,
+  "input": {
+    "port": 110
+  },
+  "expected": {
+    "valid": true,
+    "service": "pop3",
+    "description": "Post Office Protocol v3"
+  },
+  "note": "Well-known service registry entry."
+}
