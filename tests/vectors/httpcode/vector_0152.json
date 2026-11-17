@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1510,
+  "input": {
+    "code": 400
+  },
+  "expected": {
+    "code": 400,
+    "title": "Bad Request",
+    "category": "4xx",
+    "description": "Server cannot parse or understand the request."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
