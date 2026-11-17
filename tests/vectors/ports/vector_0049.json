@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 482,
+  "input": {
+    "port": 2096
+  },
+  "expected": {
+    "valid": true,
+    "service": "webmail",
+    "description": "Webmail over SSL"
+  },
+  "note": "Well-known service registry entry."
+}
