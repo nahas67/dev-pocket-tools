@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 280,
+  "input": {
+    "code": 410
+  },
+  "expected": {
+    "code": 410,
+    "title": "Gone",
+    "category": "4xx",
+    "description": "Resource was permanently removed."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
