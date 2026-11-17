@@ -1,0 +1,14 @@
+{
+  "module": "passgen",
+  "case": 1916,
+  "input": {
+    "length": 24,
+    "exclude_ambiguous": true
+  },
+  "expected": {
+    "pool_size": 88,
+    "entropy_bits": 155.026,
+    "in_range": true
+  },
+  "note": "Entropy computed as log2(pool^length)."
+}
