@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 562,
+  "input": {
+    "port": 88
+  },
+  "expected": {
+    "valid": true,
+    "service": "kerberos",
+    "description": "Kerberos"
+  },
+  "note": "Well-known service registry entry."
+}
