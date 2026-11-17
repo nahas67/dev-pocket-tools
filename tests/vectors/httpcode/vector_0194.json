@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1930,
+  "input": {
+    "code": 204
+  },
+  "expected": {
+    "code": 204,
+    "title": "No Content",
+    "category": "2xx",
+    "description": "Success with no response body."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
