@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1600,
+  "input": {
+    "code": 451
+  },
+  "expected": {
+    "code": 451,
+    "title": "Unavailable For Legal Reasons",
+    "category": "4xx",
+    "description": "Resource denied for legal reasons."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
