@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1560,
+  "input": {
+    "code": 206
+  },
+  "expected": {
+    "code": 206,
+    "title": "Partial Content",
+    "category": "2xx",
+    "description": "Partial response for a Range request."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
