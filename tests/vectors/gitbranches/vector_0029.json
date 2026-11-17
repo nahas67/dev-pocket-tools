@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 289,
+  "input": {
+    "line": "  hotfix/critical"
+  },
+  "expected": {
+    "name": "hotfix/critical",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
