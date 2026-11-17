@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""Inspect netstat/lsof listener output and build (or run) kill commands.
+
+By default this tool is read-only: it parses listener output, prints a
+summary and lists the commands that *would* terminate matching processes.
+Pass ``--execute`` to actually run them.
+"""
+
+from __future__ import annotations
+
+import argparse
+import os
+import subprocess
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dptlib import ports  # noqa: E402
+
+
+def read_input(args: argparse.Namespace) -> str:
+    """Read listener text from ``--input`` or stdin."""
+    if args.input:
+        with open(args.input, "r", encoding="utf-8", errors="replace") as fh:
+            return fh.read()
+    if sys.stdin.isatty():
+        return ""
+    return sys.stdin.read()
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="port-kill",
+        description="Parse netstat/lsof output and build process kill commands.",
+    )
+    parser.add_argument("--input", "-i", help="file with netstat/lsof output (default: stdin)")
+    parser.add_argument(
+        "--format", "-f", choices=("auto", "netstat", "lsof"), default="auto",
+        help="input format (default: auto-detect)",
+    )
+    parser.add_argument("--port", type=int, help="only match this local port")
+    parser.add_argument("--pid", type=int, help="only match this PID")
+    parser.add_argument("--force", action="store_true", help="use force kill (-9 / /F)")
+    parser.add_argument(
+        "--execute", action="store_true",
+        help="actually run the kill commands (default: print only)",
+    )
+    parser.add_argument("--yes", action="store_true", help="skip confirmation with --execute")
+    args = parser.parse_args(argv)
+
+    text = read_input(args)
+    if not text.strip():
+        print("No input supplied (use --input or pipe netstat/lsof output).", file=sys.stderr)
+        return 1
+
+    fmt = args.format
+    if fmt == "auto":
+        fmt = "lsof" if any(
+            line.lstrip().startswith("COMMAND") or " (LISTEN)" in line
+            for line in text.splitlines()
+        ) else "netstat"
+
+    entries = ports.parse_lsof(text) if fmt == "lsof" else ports.parse_netstat(text)
+    if args.port is not None:
+        entries = [e for e in entries if e.get("port") == args.port]
+    if args.pid is not None:
+        entries = [e for e in entries if e.get("pid") == args.pid]
+
+    print(ports.summarize(entries))
+    if not entries:
+        return 0
+
+    commands: list[str] = []
+    seen: set[int] = set()
+    for entry in entries:
+        pid = entry.get("pid")
+        if isinstance(pid, int) and pid not in seen:
+            seen.add(pid)
+            commands.append(" ".join(ports.kill_command(pid, force=args.force)))
+
+    if not commands:
+        print("\nNo PIDs available to kill.")
+        return 0
+
+    print("\nKill commands:")
+    for cmd in commands:
+        print(f"  {cmd}")
+
+    if args.execute:
+        if not args.yes:
+            answer = input("Execute the commands above? [y/N] ").strip().lower()
+            if answer not in ("y", "yes"):
+                print("Aborted.")
+                return 0
+        rc = 0
+        for cmd in commands:
+            result = subprocess.run(cmd, shell=True)
+            if result.returncode != 0:
+                rc = 1
+        return rc
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (OSError, ValueError) as exc:
+        print(f"port-kill: {exc}", file=sys.stderr)
+        raise SystemExit(1)
