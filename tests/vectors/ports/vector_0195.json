@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1942,
+  "input": {
+    "port": 427
+  },
+  "expected": {
+    "valid": true,
+    "service": "svrloc",
+    "description": "Service Location"
+  },
+  "note": "Well-known service registry entry."
+}
