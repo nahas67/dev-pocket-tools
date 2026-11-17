@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 420,
+  "input": {
+    "code": 429
+  },
+  "expected": {
+    "code": 429,
+    "title": "Too Many Requests",
+    "category": "4xx",
+    "description": "Rate limiting: too many requests in a given time."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
