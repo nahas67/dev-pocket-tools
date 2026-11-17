@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 52,
+  "input": {
+    "port": 636
+  },
+  "expected": {
+    "valid": true,
+    "service": "ldaps",
+    "description": "LDAP over SSL"
+  },
+  "note": "Well-known service registry entry."
+}
