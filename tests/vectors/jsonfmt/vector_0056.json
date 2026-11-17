@@ -1,0 +1,14 @@
+{
+  "module": "jsonfmt",
+  "case": 554,
+  "input": {
+    "text": "{\"nested\":{\"x\":1,\"y\":{\"z\":2}},\"list\":[1,2,3]}",
+    "indent": 2
+  },
+  "expected": {
+    "formatted": "{\n  \"nested\": {\n    \"x\": 1,\n    \"y\": {\n      \"z\": 2\n    }\n  },\n  \"list\": [\n    1,\n    2,\n    3\n  ]\n}",
+    "minified": "{\"nested\":{\"x\":1,\"y\":{\"z\":2}},\"list\":[1,2,3]}",
+    "is_json": true
+  },
+  "note": "Reference formatting computed with stdlib json.dumps."
+}
