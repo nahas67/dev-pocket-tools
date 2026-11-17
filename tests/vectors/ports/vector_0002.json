@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 12,
+  "input": {
+    "port": 53
+  },
+  "expected": {
+    "valid": true,
+    "service": "domain",
+    "description": "Domain Name System"
+  },
+  "note": "Well-known service registry entry."
+}
