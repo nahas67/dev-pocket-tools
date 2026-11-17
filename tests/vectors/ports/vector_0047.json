@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 462,
+  "input": {
+    "port": 902
+  },
+  "expected": {
+    "valid": true,
+    "service": "vmware",
+    "description": "VMware ESXi"
+  },
+  "note": "Well-known service registry entry."
+}
