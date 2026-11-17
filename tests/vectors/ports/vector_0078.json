@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 772,
+  "input": {
+    "port": 5061
+  },
+  "expected": {
+    "valid": true,
+    "service": "sips",
+    "description": "SIP over TLS"
+  },
+  "note": "Well-known service registry entry."
+}
