@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 542,
+  "input": {
+    "port": 27018
+  },
+  "expected": {
+    "valid": true,
+    "service": "mongodb",
+    "description": "MongoDB shard"
+  },
+  "note": "Well-known service registry entry."
+}
