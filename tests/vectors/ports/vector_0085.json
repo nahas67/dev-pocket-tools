@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 842,
+  "input": {
+    "port": 113
+  },
+  "expected": {
+    "valid": true,
+    "service": "auth",
+    "description": "Authentication Service"
+  },
+  "note": "Well-known service registry entry."
+}
