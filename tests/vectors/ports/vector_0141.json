@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1402,
+  "input": {
+    "port": 513
+  },
+  "expected": {
+    "valid": true,
+    "service": "rlogin",
+    "description": "Remote Login"
+  },
+  "note": "Well-known service registry entry."
+}
