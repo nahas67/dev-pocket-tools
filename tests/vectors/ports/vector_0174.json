@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1732,
+  "input": {
+    "port": 6000
+  },
+  "expected": {
+    "valid": true,
+    "service": "x11",
+    "description": "X Window System"
+  },
+  "note": "Well-known service registry entry."
+}
