@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 669,
+  "input": {
+    "line": "  develop"
+  },
+  "expected": {
+    "name": "develop",
+    "current": false,
+    "protected": true,
+    "deletable": false
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
