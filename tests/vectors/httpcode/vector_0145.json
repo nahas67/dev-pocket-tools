@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1440,
+  "input": {
+    "code": 300
+  },
+  "expected": {
+    "code": 300,
+    "title": "Multiple Choices",
+    "category": "3xx",
+    "description": "Multiple representations available; client must choose."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
