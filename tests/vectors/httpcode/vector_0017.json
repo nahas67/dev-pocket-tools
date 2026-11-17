@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 160,
+  "input": {
+    "code": 414
+  },
+  "expected": {
+    "code": 414,
+    "title": "URI Too Long",
+    "category": "4xx",
+    "description": "Request URI is too long."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
