@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1582,
+  "input": {
+    "port": 3389
+  },
+  "expected": {
+    "valid": true,
+    "service": "ms-wbt-server",
+    "description": "Remote Desktop Protocol"
+  },
+  "note": "Well-known service registry entry."
+}
