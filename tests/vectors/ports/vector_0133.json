@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1322,
+  "input": {
+    "port": 5900
+  },
+  "expected": {
+    "valid": true,
+    "service": "vnc",
+    "description": "Virtual Network Computing"
+  },
+  "note": "Well-known service registry entry."
+}
