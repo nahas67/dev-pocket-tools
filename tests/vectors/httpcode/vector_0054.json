@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 530,
+  "input": {
+    "code": 412
+  },
+  "expected": {
+    "code": 412,
+    "title": "Precondition Failed",
+    "category": "4xx",
+    "description": "A precondition evaluated to false."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
