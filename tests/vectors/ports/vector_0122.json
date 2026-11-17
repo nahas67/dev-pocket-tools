@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1212,
+  "input": {
+    "port": 9042
+  },
+  "expected": {
+    "valid": true,
+    "service": "cassandra",
+    "description": "Cassandra CQL"
+  },
+  "note": "Well-known service registry entry."
+}
