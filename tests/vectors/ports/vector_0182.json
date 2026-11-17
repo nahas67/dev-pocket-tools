@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1812,
+  "input": {
+    "port": 515
+  },
+  "expected": {
+    "valid": true,
+    "service": "lp",
+    "description": "Line Printer"
+  },
+  "note": "Well-known service registry entry."
+}
