@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 962,
+  "input": {
+    "port": 37
+  },
+  "expected": {
+    "valid": true,
+    "service": "time",
+    "description": "Time Protocol"
+  },
+  "note": "Well-known service registry entry."
+}
