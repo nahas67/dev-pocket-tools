@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 90,
+  "input": {
+    "code": 406
+  },
+  "expected": {
+    "code": 406,
+    "title": "Not Acceptable",
+    "category": "4xx",
+    "description": "No representation matches the Accept header."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
