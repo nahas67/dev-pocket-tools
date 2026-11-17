@@ -1,0 +1,12 @@
+{
+  "module": "cron",
+  "case": 1885,
+  "input": {
+    "expression": "@weekly"
+  },
+  "expected": {
+    "field_count": 1,
+    "expression": "@weekly"
+  },
+  "note": "Cron expression catalogue entry."
+}
