@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 982,
+  "input": {
+    "port": 138
+  },
+  "expected": {
+    "valid": true,
+    "service": "netbios-dgm",
+    "description": "NetBIOS Datagram"
+  },
+  "note": "Well-known service registry entry."
+}
