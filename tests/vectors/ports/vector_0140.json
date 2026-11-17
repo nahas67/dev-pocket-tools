@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1392,
+  "input": {
+    "port": 143
+  },
+  "expected": {
+    "valid": true,
+    "service": "imap",
+    "description": "Internet Message Access Protocol"
+  },
+  "note": "Well-known service registry entry."
+}
