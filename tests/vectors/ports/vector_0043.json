@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 422,
+  "input": {
+    "port": 68
+  },
+  "expected": {
+    "valid": true,
+    "service": "dhcp",
+    "description": "DHCP client"
+  },
+  "note": "Well-known service registry entry."
+}
