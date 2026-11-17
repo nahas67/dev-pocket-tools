@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1570,
+  "input": {
+    "code": 307
+  },
+  "expected": {
+    "code": 307,
+    "title": "Temporary Redirect",
+    "category": "3xx",
+    "description": "Redirect that preserves the request method."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
