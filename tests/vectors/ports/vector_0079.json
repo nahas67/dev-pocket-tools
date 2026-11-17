@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 782,
+  "input": {
+    "port": 6443
+  },
+  "expected": {
+    "valid": true,
+    "service": "kubernetes",
+    "description": "Kubernetes API server"
+  },
+  "note": "Well-known service registry entry."
+}
