@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 260,
+  "input": {
+    "code": 208
+  },
+  "expected": {
+    "code": 208,
+    "title": "Already Reported",
+    "category": "2xx",
+    "description": "WebDAV: result already reported in an earlier member."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
