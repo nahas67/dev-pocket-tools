@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1140,
+  "input": {
+    "code": 402
+  },
+  "expected": {
+    "code": 402,
+    "title": "Payment Required",
+    "category": "4xx",
+    "description": "Reserved for future use / payment required."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
