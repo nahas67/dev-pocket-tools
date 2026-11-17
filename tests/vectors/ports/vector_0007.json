@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 62,
+  "input": {
+    "port": 1194
+  },
+  "expected": {
+    "valid": true,
+    "service": "openvpn",
+    "description": "OpenVPN"
+  },
+  "note": "Well-known service registry entry."
+}
