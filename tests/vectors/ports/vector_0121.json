@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1202,
+  "input": {
+    "port": 8090
+  },
+  "expected": {
+    "valid": true,
+    "service": "http",
+    "description": "Alternate HTTP"
+  },
+  "note": "Well-known service registry entry."
+}
