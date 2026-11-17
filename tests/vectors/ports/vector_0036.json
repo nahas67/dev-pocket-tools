@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 352,
+  "input": {
+    "port": 2484
+  },
+  "expected": {
+    "valid": true,
+    "service": "mysql",
+    "description": "MySQL over SSL (historic)"
+  },
+  "note": "Well-known service registry entry."
+}
