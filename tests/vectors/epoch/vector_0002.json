@@ -1,0 +1,14 @@
+{
+  "module": "epoch",
+  "case": 11,
+  "input": {
+    "date": "2020-01-12",
+    "unit": "s"
+  },
+  "expected": {
+    "epoch_s": 1578787200,
+    "epoch_ms": 1578787200000,
+    "iso": "2020-01-12"
+  },
+  "note": "UTC midnight epoch computed with datetime; independent of dptlib.epoch."
+}
