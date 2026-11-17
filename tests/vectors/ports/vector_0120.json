@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1192,
+  "input": {
+    "port": 6667
+  },
+  "expected": {
+    "valid": true,
+    "service": "irc",
+    "description": "IRC"
+  },
+  "note": "Well-known service registry entry."
+}
