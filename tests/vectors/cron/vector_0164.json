@@ -1,0 +1,12 @@
+{
+  "module": "cron",
+  "case": 1635,
+  "input": {
+    "expression": "@yearly"
+  },
+  "expected": {
+    "field_count": 1,
+    "expression": "@yearly"
+  },
+  "note": "Cron expression catalogue entry."
+}
