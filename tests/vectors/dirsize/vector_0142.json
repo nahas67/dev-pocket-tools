@@ -1,0 +1,11 @@
+{
+  "module": "dirsize",
+  "case": 1417,
+  "input": {
+    "bytes": 181504
+  },
+  "expected": {
+    "human": "177.2 KiB"
+  },
+  "note": "Binary-prefix sizing computed independently."
+}
