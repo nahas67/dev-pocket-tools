@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+"""Pretty-print, minify, validate or flatten JSON."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dptlib import jsonfmt  # noqa: E402
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="json-fmt",
+        description="Format, minify, validate or flatten JSON from a file or stdin.",
+    )
+    parser.add_argument("file", nargs="?", help="JSON file (default: stdin)")
+    parser.add_argument("--indent", type=int, default=2, help="indent width (default: 2)")
+    parser.add_argument("--sort-keys", action="store_true", help="sort object keys")
+    parser.add_argument("--minify", action="store_true", help="output compact JSON")
+    parser.add_argument("--flatten", action="store_true", help="flatten to dotted paths")
+    parser.add_argument("--check", action="store_true", help="only validate; print a status line")
+    args = parser.parse_args(argv)
+
+    if args.file:
+        with open(args.file, "r", encoding="utf-8", errors="replace") as fh:
+            text = fh.read()
+    else:
+        text = sys.stdin.read()
+    if not text.strip():
+        print("No JSON supplied.", file=sys.stderr)
+        return 1
+
+    try:
+        if args.check:
+            print("Valid JSON" if jsonfmt.is_json(text) else "Invalid JSON")
+            return 0 if jsonfmt.is_json(text) else 1
+        if args.minify:
+            print(jsonfmt.minify(text))
+        elif args.flatten:
+            obj = json.loads(text)
+            for key, value in jsonfmt.flatten(obj).items():
+                print(f"{key}\t{json.dumps(value, ensure_ascii=False)}")
+        else:
+            print(jsonfmt.format_json(text, indent=args.indent, sort_keys=args.sort_keys))
+    except ValueError as exc:
+        print(f"json-fmt: {exc}", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except OSError as exc:
+        print(f"json-fmt: {exc}", file=sys.stderr)
+        raise SystemExit(1)
