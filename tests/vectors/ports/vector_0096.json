@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 952,
+  "input": {
+    "port": 1
+  },
+  "expected": {
+    "valid": true,
+    "service": "tcpmux",
+    "description": "TCP Port Multiplexer"
+  },
+  "note": "Well-known service registry entry."
+}
