@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 49,
+  "input": {
+    "line": "  dependabot/pip/foo-1.2"
+  },
+  "expected": {
+    "name": "dependabot/pip/foo-1.2",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
