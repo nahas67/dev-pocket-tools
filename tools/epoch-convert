@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+"""Convert epochs, datetimes and durations."""
+
+from __future__ import annotations
+
+import argparse
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dptlib import epoch  # noqa: E402
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="epoch-convert",
+        description="Convert epoch timestamps, parse datetimes and humanise durations.",
+    )
+    parser.add_argument("value", nargs="?", help="value to convert (default: stdin)")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--from-datetime", action="store_true", help="parse value as a datetime -> epoch seconds")
+    mode.add_argument("--humanize", action="store_true", help="treat value as seconds -> '1d 2h ...'")
+    mode.add_argument("--now-ms", action="store_true", help="print current epoch milliseconds")
+    parser.add_argument(
+        "--unit", default="s",
+        help="timestamp unit for epoch->datetime: s/ms/us/ns (default: s)",
+    )
+    args = parser.parse_args(argv)
+
+    if args.now_ms:
+        print(epoch.now_ms())
+        return 0
+
+    value = args.value
+    if value is None:
+        value = sys.stdin.read().strip() if not sys.stdin.isatty() else ""
+    if not value:
+        print("No value supplied.", file=sys.stderr)
+        return 1
+
+    try:
+        if args.from_datetime:
+            print(epoch.from_datetime(value))
+        elif args.humanize:
+            print(epoch.humanize(value))
+        else:
+            print(epoch.to_datetime(value, unit=args.unit))
+    except ValueError as exc:
+        print(f"epoch-convert: {exc}", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
