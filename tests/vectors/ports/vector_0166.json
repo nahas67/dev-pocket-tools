@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1652,
+  "input": {
+    "port": 93
+  },
+  "expected": {
+    "valid": true,
+    "service": "nntp",
+    "description": "NNTP"
+  },
+  "note": "Well-known service registry entry."
+}
