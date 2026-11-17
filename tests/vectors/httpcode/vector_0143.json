@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 1420,
+  "input": {
+    "code": 505
+  },
+  "expected": {
+    "code": 505,
+    "title": "HTTP Version Not Supported",
+    "category": "5xx",
+    "description": "Server does not support the HTTP version used."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
