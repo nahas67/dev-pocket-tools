@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 560,
+  "input": {
+    "code": 102
+  },
+  "expected": {
+    "code": 102,
+    "title": "Processing",
+    "category": "1xx",
+    "description": "Server has received and is processing the request, no response yet."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
