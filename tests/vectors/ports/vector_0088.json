@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 872,
+  "input": {
+    "port": 990
+  },
+  "expected": {
+    "valid": true,
+    "service": "ftps",
+    "description": "FTP over TLS"
+  },
+  "note": "Well-known service registry entry."
+}
