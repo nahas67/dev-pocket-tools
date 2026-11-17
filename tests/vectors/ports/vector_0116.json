@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1152,
+  "input": {
+    "port": 1434
+  },
+  "expected": {
+    "valid": true,
+    "service": "mssql-monitor",
+    "description": "SQL Browser"
+  },
+  "note": "Well-known service registry entry."
+}
