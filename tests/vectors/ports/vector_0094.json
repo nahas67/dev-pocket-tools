@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 932,
+  "input": {
+    "port": 8181
+  },
+  "expected": {
+    "valid": true,
+    "service": "http",
+    "description": "Application server"
+  },
+  "note": "Well-known service registry entry."
+}
