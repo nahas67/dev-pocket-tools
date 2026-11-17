@@ -1,0 +1,46 @@
+{
+  "module": "envdiff",
+  "case": 553,
+  "input": {
+    "a": {
+      "VIRTUAL_ENV": "/app/.venv",
+      "DATABASE_URL": "postgres://localhost/app",
+      "REDIS_URL": "redis://localhost:6379/0",
+      "LOG_LEVEL": "info",
+      "DEBUG": "false",
+      "PORT": "8080",
+      "HOST": "0.0.0.0",
+      "API_KEY": "sk-test-abc123"
+    },
+    "b": {
+      "VIRTUAL_ENV": "CHANGED",
+      "DATABASE_URL": "postgres://localhost/app",
+      "REDIS_URL": "redis://localhost:6379/0",
+      "LOG_LEVEL": "info",
+      "DEBUG": "false",
+      "PORT": "8080",
+      "HOST": "0.0.0.0",
+      "NEW_VAR_3": "new"
+    }
+  },
+  "expected": {
+    "added": [
+      "NEW_VAR_3"
+    ],
+    "removed": [
+      "API_KEY"
+    ],
+    "changed": [
+      "VIRTUAL_ENV"
+    ],
+    "same": [
+      "DATABASE_URL",
+      "DEBUG",
+      "HOST",
+      "LOG_LEVEL",
+      "PORT",
+      "REDIS_URL"
+    ]
+  },
+  "note": "Diff computed with plain set/dict operations."
+}
