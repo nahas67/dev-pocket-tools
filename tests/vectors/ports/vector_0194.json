@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1932,
+  "input": {
+    "port": 123
+  },
+  "expected": {
+    "valid": true,
+    "service": "ntp",
+    "description": "Network Time Protocol"
+  },
+  "note": "Well-known service registry entry."
+}
