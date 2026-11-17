@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 752,
+  "input": {
+    "port": 2087
+  },
+  "expected": {
+    "valid": true,
+    "service": "whm",
+    "description": "WHM over SSL"
+  },
+  "note": "Well-known service registry entry."
+}
