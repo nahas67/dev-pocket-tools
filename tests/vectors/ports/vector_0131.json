@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1302,
+  "input": {
+    "port": 2376
+  },
+  "expected": {
+    "valid": true,
+    "service": "docker",
+    "description": "Docker daemon (TLS)"
+  },
+  "note": "Well-known service registry entry."
+}
