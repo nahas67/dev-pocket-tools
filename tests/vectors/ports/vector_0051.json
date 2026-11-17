@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 502,
+  "input": {
+    "port": 5601
+  },
+  "expected": {
+    "valid": true,
+    "service": "kibana",
+    "description": "Kibana"
+  },
+  "note": "Well-known service registry entry."
+}
