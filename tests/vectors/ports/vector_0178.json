@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1772,
+  "input": {
+    "port": 19
+  },
+  "expected": {
+    "valid": true,
+    "service": "chargen",
+    "description": "Character Generator"
+  },
+  "note": "Well-known service registry entry."
+}
