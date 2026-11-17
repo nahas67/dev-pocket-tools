@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1362,
+  "input": {
+    "port": 9
+  },
+  "expected": {
+    "valid": true,
+    "service": "discard",
+    "description": "Discard"
+  },
+  "note": "Well-known service registry entry."
+}
