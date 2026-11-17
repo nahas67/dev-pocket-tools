@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+"""Report file/directory sizes in an aligned table."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dptlib import dirsize  # noqa: E402
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="dir-size",
+        description="Compute sizes of files/directories (recursive) and print a table.",
+    )
+    parser.add_argument("paths", nargs="*", default=["."], help="paths to measure (default: .)")
+    parser.add_argument("--json", action="store_true", help="emit JSON instead of a table")
+    args = parser.parse_args(argv)
+
+    rows = dirsize.collect_sizes(args.paths)
+    if args.json:
+        payload = [
+            {"path": p, "bytes": size, "files": count} for p, size, count in rows
+        ]
+        print(json.dumps(payload, indent=2))
+    else:
+        print(dirsize.format_table(rows))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
