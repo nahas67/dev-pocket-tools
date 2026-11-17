@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1332,
+  "input": {
+    "port": 8000
+  },
+  "expected": {
+    "valid": true,
+    "service": "http-alt",
+    "description": "Alternate HTTP / Django dev"
+  },
+  "note": "Well-known service registry entry."
+}
