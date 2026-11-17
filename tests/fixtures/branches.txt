@@ -1,0 +1,5 @@
+* main
+  develop
+  feature/auth
+  feature/payments
+  bugfix/issue-42
