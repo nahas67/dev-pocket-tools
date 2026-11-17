@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 130,
+  "input": {
+    "code": 202
+  },
+  "expected": {
+    "code": 202,
+    "title": "Accepted",
+    "category": "2xx",
+    "description": "Request accepted for processing but not yet completed."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
