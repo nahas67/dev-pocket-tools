@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 809,
+  "input": {
+    "line": "  wip/scratch"
+  },
+  "expected": {
+    "name": "wip/scratch",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
