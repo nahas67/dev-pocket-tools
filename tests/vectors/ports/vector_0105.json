@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1042,
+  "input": {
+    "port": 5000
+  },
+  "expected": {
+    "valid": true,
+    "service": "upnp",
+    "description": "UPnP / Flask dev server"
+  },
+  "note": "Well-known service registry entry."
+}
