@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 922,
+  "input": {
+    "port": 7001
+  },
+  "expected": {
+    "valid": true,
+    "service": "weblogic",
+    "description": "WebLogic"
+  },
+  "note": "Well-known service registry entry."
+}
