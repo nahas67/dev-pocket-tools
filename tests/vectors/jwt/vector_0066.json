@@ -1,0 +1,21 @@
+{
+  "module": "jwt",
+  "case": 658,
+  "input": {
+    "token": "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJpc3MiOiJodHRwczovL2V4YW1wbGUuY29tIiwiYXVkIjoiYXBpIiwiZXhwIjoyMDAwMDAwMDAwLCJjYXNlIjo2NTh9.sig"
+  },
+  "expected": {
+    "header": {
+      "alg": "none",
+      "typ": "JWT"
+    },
+    "payload": {
+      "iss": "https://example.com",
+      "aud": "api",
+      "exp": 2000000000,
+      "case": 658
+    },
+    "signature": "sig"
+  },
+  "note": "Token assembled with stdlib base64 for decode regression tests."
+}
