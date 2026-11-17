@@ -1,0 +1,14 @@
+{
+  "module": "jsonfmt",
+  "case": 444,
+  "input": {
+    "text": "[{\"id\":1},{\"id\":2}]",
+    "indent": 2
+  },
+  "expected": {
+    "formatted": "[\n  {\n    \"id\": 1\n  },\n  {\n    \"id\": 2\n  }\n]",
+    "minified": "[{\"id\":1},{\"id\":2}]",
+    "is_json": true
+  },
+  "note": "Reference formatting computed with stdlib json.dumps."
+}
