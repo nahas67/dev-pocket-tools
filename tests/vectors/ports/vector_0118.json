@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 1172,
+  "input": {
+    "port": 3269
+  },
+  "expected": {
+    "valid": true,
+    "service": "ldaps",
+    "description": "Global Catalog over SSL"
+  },
+  "note": "Well-known service registry entry."
+}
