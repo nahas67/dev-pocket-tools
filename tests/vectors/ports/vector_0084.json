@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 832,
+  "input": {
+    "port": 79
+  },
+  "expected": {
+    "valid": true,
+    "service": "finger",
+    "description": "Finger"
+  },
+  "note": "Well-known service registry entry."
+}
