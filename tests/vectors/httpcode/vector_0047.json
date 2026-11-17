@@ -1,0 +1,14 @@
+{
+  "module": "httpcode",
+  "case": 460,
+  "input": {
+    "code": 404
+  },
+  "expected": {
+    "code": 404,
+    "title": "Not Found",
+    "category": "4xx",
+    "description": "The requested resource does not exist."
+  },
+  "note": "Status code reference derived from RFC 9110 and IANA registry."
+}
