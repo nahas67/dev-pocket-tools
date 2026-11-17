@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 142,
+  "input": {
+    "port": 21
+  },
+  "expected": {
+    "valid": true,
+    "service": "ftp",
+    "description": "FTP control"
+  },
+  "note": "Well-known service registry entry."
+}
