@@ -1,0 +1,21 @@
+{
+  "module": "jwt",
+  "case": 208,
+  "input": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyLTEiLCJpYXQiOjE3MDAwMDAwMDAsImV4cCI6MTcwMDAwMzYwMCwiY2FzZSI6MjA4fQ.sig"
+  },
+  "expected": {
+    "header": {
+      "alg": "HS256",
+      "typ": "JWT"
+    },
+    "payload": {
+      "sub": "user-1",
+      "iat": 1700000000,
+      "exp": 1700003600,
+      "case": 208
+    },
+    "signature": "sig"
+  },
+  "note": "Token assembled with stdlib base64 for decode regression tests."
+}
