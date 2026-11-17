@@ -1,0 +1,14 @@
+{
+  "module": "gitbranches",
+  "case": 549,
+  "input": {
+    "line": "  staging"
+  },
+  "expected": {
+    "name": "staging",
+    "current": false,
+    "protected": false,
+    "deletable": true
+  },
+  "note": "Branch classification derived from porcelain-style listing."
+}
