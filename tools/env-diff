@@ -1,0 +1,69 @@
+#!/usr/bin/env python3
+"""Compare two ``KEY=VALUE`` environment files."""
+
+from __future__ import annotations
+
+import argparse
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from dptlib import envdiff  # noqa: E402
+
+
+def read_env(arg: str | None, label: str) -> str:
+    """Read env text from a file, or stdin when ``arg`` is ``"-"``."""
+    if arg is None or arg == "-":
+        return sys.stdin.read()
+    with open(arg, "r", encoding="utf-8", errors="replace") as fh:
+        return fh.read()
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(
+        prog="env-diff",
+        description="Diff two dotenv-style files (added / removed / changed / same).",
+    )
+    parser.add_argument("a", help="first env file (use - for stdin)")
+    parser.add_argument("b", help="second env file (use - for stdin)")
+    parser.add_argument("--mask", action="store_true", help="mask values in the report")
+    parser.add_argument("--show-same", action="store_true", help="also list unchanged keys")
+    args = parser.parse_args(argv)
+
+    a = envdiff.parse_env(read_env(args.a, "a"))
+    b = envdiff.parse_env(read_env(args.b, "b"))
+    diff = envdiff.diff_env(a, b)
+
+    def show(key: str, title: str) -> None:
+        items = diff[key]
+        print(f"{title} ({len(items)}):")
+        if not items:
+            print("  (none)")
+            return
+        for name in sorted(items):
+            value = items[name]
+            if key == "changed":
+                old = envdiff.mask_value(value["old"]) if args.mask else value["old"]
+                new = envdiff.mask_value(value["new"]) if args.mask else value["new"]
+                print(f"  {name}: {old!r} -> {new!r}")
+            else:
+                display = envdiff.mask_value(value) if args.mask else value
+                print(f"  {name}={display!r}")
+
+    show("added", "ADDED")
+    show("removed", "REMOVED")
+    show("changed", "CHANGED")
+    if args.show_same:
+        show("same", "SAME")
+    else:
+        print(f"SAME ({len(diff['same'])}): (hidden; use --show-same)")
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except OSError as exc:
+        print(f"env-diff: {exc}", file=sys.stderr)
+        raise SystemExit(1)
