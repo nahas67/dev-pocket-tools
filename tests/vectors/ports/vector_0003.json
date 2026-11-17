@@ -1,0 +1,13 @@
+{
+  "module": "ports",
+  "case": 22,
+  "input": {
+    "port": 101
+  },
+  "expected": {
+    "valid": true,
+    "service": "hostname",
+    "description": "NIC Host Name Server"
+  },
+  "note": "Well-known service registry entry."
+}
